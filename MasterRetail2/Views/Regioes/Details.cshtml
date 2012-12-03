@@ -1,0 +1,23 @@
+@model Rcky.MasterRetail2.Entities.Regiao
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Regiao</legend>
+
+    <div class="display-label">Nome</div>
+    <div class="display-field">@Model.Nome</div>
+
+    <div class="display-label">Clientes</div>
+    <div class="display-field">@(Model.Clientes == null ? "None" : Model.Clientes.Count.ToString())</div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.RegiaoId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+

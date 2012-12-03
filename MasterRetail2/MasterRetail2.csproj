@@ -1,0 +1,561 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{72FF1501-C097-4C86-884D-A3E6F529C5C7}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MasterRetail2</RootNamespace>
+    <AssemblyName>MasterRetail2</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\RegioesController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Mapping\AcessorioMap.cs" />
+    <Compile Include="Mapping\AdicaoMap.cs" />
+    <Compile Include="Mapping\AgenciaMap.cs" />
+    <Compile Include="Mapping\ArquivoRecebidoMap.cs" />
+    <Compile Include="Mapping\ArvoreMap.cs" />
+    <Compile Include="Mapping\BairroMap.cs" />
+    <Compile Include="Mapping\BancoMap.cs" />
+    <Compile Include="Mapping\BandeiraMap.cs" />
+    <Compile Include="Mapping\CidadeMap.cs" />
+    <Compile Include="Mapping\ClienteMap.cs" />
+    <Compile Include="Mapping\CnaeMap.cs" />
+    <Compile Include="Mapping\CnaeLojaMap.cs" />
+    <Compile Include="Mapping\CodigobarrasMap.cs" />
+    <Compile Include="Mapping\CodigoTributacaoEcfMap.cs" />
+    <Compile Include="Mapping\CodigoTributacaoMap.cs" />
+    <Compile Include="Mapping\ComissaoMap.cs" />
+    <Compile Include="Mapping\CondicaoPagamentoMap.cs" />
+    <Compile Include="Mapping\ConsultorLojaMap.cs" />
+    <Compile Include="Mapping\ConsultorMap.cs" />
+    <Compile Include="Mapping\ContaPagarMap.cs" />
+    <Compile Include="Mapping\ContaReceberMap.cs" />
+    <Compile Include="Mapping\ContatoClienteMap.cs" />
+    <Compile Include="Mapping\ContaCorrenteMap.cs" />
+    <Compile Include="Mapping\ContaCorrenteLojaMap.cs" />
+    <Compile Include="Mapping\CupomFiscalMap.cs" />
+    <Compile Include="Mapping\CupomFiscalNfMap.cs" />
+    <Compile Include="Mapping\DeclaracaoImportacaoMap.cs" />
+    <Compile Include="Mapping\DespesaBaseMap.cs" />
+    <Compile Include="Mapping\DiaCondicaoPagamentoMap.cs" />
+    <Compile Include="Mapping\DocumentoMap.cs" />
+    <Compile Include="Mapping\DocumentoPessoaMap.cs" />
+    <Compile Include="Mapping\EcfMap.cs" />
+    <Compile Include="Mapping\EmailMap.cs" />
+    <Compile Include="Mapping\EnderecoMap.cs" />
+    <Compile Include="Mapping\EnderecoPessoaMap.cs" />
+    <Compile Include="Mapping\EntradaMap.cs" />
+    <Compile Include="Mapping\EntregadorMap.cs" />
+    <Compile Include="Mapping\EquipamentoMap.cs" />
+    <Compile Include="Mapping\EquipamentoProdutoMap.cs" />
+    <Compile Include="Mapping\EstoqueProdutoCuboMap.cs" />
+    <Compile Include="Mapping\EstoqueProdutoMap.cs" />
+    <Compile Include="Mapping\EvolucaoCustoMap.cs" />
+    <Compile Include="Mapping\FoneDialUpMap.cs" />
+    <Compile Include="Mapping\FoneMap.cs" />
+    <Compile Include="Mapping\FornecedorMap.cs" />
+    <Compile Include="Mapping\FornecedorProdutoMap.cs" />
+    <Compile Include="Mapping\FotoProdutoMap.cs" />
+    <Compile Include="Mapping\FuncaoOperadorMap.cs" />
+    <Compile Include="Mapping\FuncaoPerfilMap.cs" />
+    <Compile Include="Mapping\FuncaoProgramaMap.cs" />
+    <Compile Include="Mapping\GrauRelacionamentoMap.cs" />
+    <Compile Include="Mapping\GrupoClienteMap.cs" />
+    <Compile Include="Mapping\GrupoDespesaMap.cs" />
+    <Compile Include="Mapping\GrupoFaturamentoMap.cs" />
+    <Compile Include="Mapping\GrupoMenuMap.cs" />
+    <Compile Include="Mapping\GrupoPdv.cs" />
+    <Compile Include="Mapping\GrupoProdutoMap.cs" />
+    <Compile Include="Mapping\GrupoTributacaoMap.cs" />
+    <Compile Include="Mapping\HistoricoEquipamentoMap.cs" />
+    <Compile Include="Mapping\HistoricoLancamentoMap.cs" />
+    <Compile Include="Mapping\ImagemItemManualMap.cs" />
+    <Compile Include="Mapping\IndicacaoMap.cs" />
+    <Compile Include="Mapping\InstrucaoPdvMap.cs" />
+    <Compile Include="Mapping\InutilizacaoNfeMap.cs" />
+    <Compile Include="Mapping\InventarioMap.cs" />
+    <Compile Include="Mapping\ItemArvoreMap.cs" />
+    <Compile Include="Mapping\ItemEntradaMap.cs" />
+    <Compile Include="Mapping\ItemInventarioMap.cs" />
+    <Compile Include="Mapping\ItemKitMap.cs" />
+    <Compile Include="Mapping\ItemManualMap.cs" />
+    <Compile Include="Mapping\ItemMovimentoMap.cs" />
+    <Compile Include="Mapping\ItemNotaFiscalMap.cs" />
+    <Compile Include="Mapping\ItemPedidoCompraMap.cs" />
+    <Compile Include="Mapping\ItemPedidoVendaMap.cs" />
+    <Compile Include="Mapping\ItemPromocaoMap.cs" />
+    <Compile Include="Mapping\ItemTecladoRapidoMap.cs" />
+    <Compile Include="Mapping\ItemVendaMap.cs" />
+    <Compile Include="Mapping\KitMap.cs" />
+    <Compile Include="Mapping\LacreMap.cs" />
+    <Compile Include="Mapping\LancamentoMap.cs" />
+    <Compile Include="Mapping\LayoutBoletoMap.cs" />
+    <Compile Include="Mapping\LayoutCnabMap.cs" />
+    <Compile Include="Mapping\LinkMap.cs" />
+    <Compile Include="Mapping\ListaLojaMap.cs" />
+    <Compile Include="Mapping\ListaMap.cs" />
+    <Compile Include="Mapping\LocalEstoqueMap.cs" />
+    <Compile Include="Mapping\LogAcessoMap.cs" />
+    <Compile Include="Mapping\LogradouroMap.cs" />
+    <Compile Include="Mapping\LojaClienteMap.cs" />
+    <Compile Include="Mapping\LojaMap.cs" />
+    <Compile Include="Mapping\LojaOperadorMap.cs" />
+    <Compile Include="Mapping\ManualMap.cs" />
+    <Compile Include="Mapping\MapaResumoMap.cs" />
+    <Compile Include="Mapping\MarcaEcfMap.cs" />
+    <Compile Include="Mapping\MensagemMap.cs" />
+    <Compile Include="Mapping\MenuMap.cs" />
+    <Compile Include="Mapping\MicroTerminalMap.cs" />
+    <Compile Include="Mapping\ModalideProdutoMap.cs" />
+    <Compile Include="Mapping\ModeloEcfMap.cs" />
+    <Compile Include="Mapping\MotivoDesoneracaoProdutoMap.cs" />
+    <Compile Include="Mapping\MovimentacaoEquipamentoMap.cs" />
+    <Compile Include="Mapping\MovimentoMap.cs" />
+    <Compile Include="Mapping\MovimentoPdvMap.cs" />
+    <Compile Include="Mapping\NaturezaOperacaoMap.cs" />
+    <Compile Include="Mapping\NcmCnaeMap.cs" />
+    <Compile Include="Mapping\NcmMap.cs" />
+    <Compile Include="Mapping\NcmUfRegimeTributarioMap.cs" />
+    <Compile Include="Mapping\NotaFiscalMap.cs" />
+    <Compile Include="Mapping\NoticiaMap.cs" />
+    <Compile Include="Mapping\NumeroMapaResumoMap.cs" />
+    <Compile Include="Mapping\OcorrenciaPdvMap.cs" />
+    <Compile Include="Mapping\OperadorMap.cs" />
+    <Compile Include="Mapping\OperadorValorGrupoMap.cs" />
+    <Compile Include="Mapping\OrigemProdutoMap.cs" />
+    <Compile Include="Mapping\ParametroMap.cs" />
+    <Compile Include="Mapping\ParametroPdvMap.cs" />
+    <Compile Include="Mapping\ParcelamentoSubtipoRecebimentoMap.cs" />
+    <Compile Include="Mapping\PdvMap.cs" />
+    <Compile Include="Mapping\PedidoCompraMap.cs" />
+    <Compile Include="Mapping\PedidoTransitoMap.cs" />
+    <Compile Include="Mapping\PedidoVendaMap.cs" />
+    <Compile Include="Mapping\PerfilMap.cs" />
+    <Compile Include="Mapping\PessoaMap.cs" />
+    <Compile Include="Mapping\PessoaRelacionamentoMap.cs" />
+    <Compile Include="Mapping\ProdutoListaMap.cs" />
+    <Compile Include="Mapping\ProdutoLojaMap.cs" />
+    <Compile Include="Mapping\ProdutoMap.cs" />
+    <Compile Include="Mapping\ProgramaMap.cs" />
+    <Compile Include="Mapping\PromocaoMap.cs" />
+    <Compile Include="Mapping\PropriedadeMap.cs" />
+    <Compile Include="Mapping\PropriedadeProdutoMap.cs" />
+    <Compile Include="Mapping\RecebimentoPdvMap.cs" />
+    <Compile Include="Mapping\RecebimentoVendaMap.cs" />
+    <Compile Include="Mapping\RedeTefMap.cs" />
+    <Compile Include="Mapping\RegiaoMap.cs" />
+    <Compile Include="Mapping\RegimeTributarioMap.cs" />
+    <Compile Include="Mapping\SerieNfMap.cs" />
+    <Compile Include="Mapping\ServicoMap.cs" />
+    <Compile Include="Mapping\SetorBalancaMap.cs" />
+    <Compile Include="Mapping\SituacaoMap.cs" />
+    <Compile Include="Mapping\SituacaoTributariaMap.cs" />
+    <Compile Include="Mapping\SubmenuMap.cs" />
+    <Compile Include="Mapping\SubtipoRecebimentoMap.cs" />
+    <Compile Include="Mapping\TabelaMap.cs" />
+    <Compile Include="Mapping\TecladoRapidoMap.cs" />
+    <Compile Include="Mapping\TecladoRapidoPdvMap.cs" />
+    <Compile Include="Mapping\TeclaMicroTerminalMap.cs" />
+    <Compile Include="Mapping\TelefoneMap.cs" />
+    <Compile Include="Mapping\TipoDespesaMap.cs" />
+    <Compile Include="Mapping\TipoEnderecoMap.cs" />
+    <Compile Include="Mapping\TipoEquipamentoMap.cs" />
+    <Compile Include="Mapping\TipoGrupoMap.cs" />
+    <Compile Include="Mapping\TipoMovimentoMap.cs" />
+    <Compile Include="Mapping\TipoOcorrenciaMap.cs" />
+    <Compile Include="Mapping\TipoParametroMap.cs" />
+    <Compile Include="Mapping\TipoParametroPdvMap.cs" />
+    <Compile Include="Mapping\TipoRecebimentoMap.cs" />
+    <Compile Include="Mapping\TipoSangriaMap.cs" />
+    <Compile Include="Mapping\TransacaoEstoqueMap.cs" />
+    <Compile Include="Mapping\TransportadorMap.cs" />
+    <Compile Include="Mapping\TributacaoMap.cs" />
+    <Compile Include="Mapping\UfMap.cs" />
+    <Compile Include="Mapping\UfWebserviceMap.cs" />
+    <Compile Include="Mapping\UnidadeMap.cs" />
+    <Compile Include="Mapping\ValorGrupoLojaMap.cs" />
+    <Compile Include="Mapping\ValorGrupoMap.cs" />
+    <Compile Include="Mapping\ValorMapaResumoMap.cs" />
+    <Compile Include="Mapping\ValorProdutoMap.cs" />
+    <Compile Include="Mapping\ValorPropriedadeMap.cs" />
+    <Compile Include="Mapping\VeiculoMap.cs" />
+    <Compile Include="Mapping\VendaCuboMap.cs" />
+    <Compile Include="Mapping\VendaMap.cs" />
+    <Compile Include="Mapping\VendaProdutoCuboMap.cs" />
+    <Compile Include="Mapping\VendedorMap.cs" />
+    <Compile Include="Mapping\VideoMap.cs" />
+    <Compile Include="Mapping\VolumeEntradaMap.cs" />
+    <Compile Include="Mapping\VolumeMap.cs" />
+    <Compile Include="Mapping\VolumeVendaMap.cs" />
+    <Compile Include="Mapping\WebserviceMap.cs" />
+    <Compile Include="Models\Acessorio.cs" />
+    <Compile Include="Models\Adicao.cs" />
+    <Compile Include="Models\Agencia.cs" />
+    <Compile Include="Models\ArquivoRecebido.cs" />
+    <Compile Include="Models\Arvore.cs" />
+    <Compile Include="Models\Bairro.cs" />
+    <Compile Include="Models\Banco.cs" />
+    <Compile Include="Models\Bandeira.cs" />
+    <Compile Include="Models\Cidade.cs" />
+    <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\Cnae.cs" />
+    <Compile Include="Models\CnaeLoja.cs" />
+    <Compile Include="Models\CodigoBarras.cs" />
+    <Compile Include="Models\CodigoTributacao.cs" />
+    <Compile Include="Models\CodigoTributacaoEcf.cs" />
+    <Compile Include="Models\Comissao.cs" />
+    <Compile Include="Models\CondicaoPagamento.cs" />
+    <Compile Include="Models\Consultor.cs" />
+    <Compile Include="Models\ConsultorLoja.cs" />
+    <Compile Include="Models\ContatoCliente.cs" />
+    <Compile Include="Models\ContaCorrente.cs" />
+    <Compile Include="Models\ContaCorrenteLoja.cs" />
+    <Compile Include="Models\ContaPagar.cs" />
+    <Compile Include="Models\ContaReceber.cs" />
+    <Compile Include="Models\CupomFiscal.cs" />
+    <Compile Include="Models\CupomFiscalNf.cs" />
+    <Compile Include="Models\DeclaracaoImportacao.cs" />
+    <Compile Include="Models\DespesaBase.cs" />
+    <Compile Include="Models\DiaCondicaoPagamento.cs" />
+    <Compile Include="Models\Documento.cs" />
+    <Compile Include="Models\DocumentoPessoa.cs" />
+    <Compile Include="Models\Ecf.cs" />
+    <Compile Include="Models\Email.cs" />
+    <Compile Include="Models\Endereco.cs" />
+    <Compile Include="Models\EnderecoPessoa.cs" />
+    <Compile Include="Models\Entrada.cs" />
+    <Compile Include="Models\Entregador.cs" />
+    <Compile Include="Models\Equipamento.cs" />
+    <Compile Include="Models\EquipamentoProduto.cs" />
+    <Compile Include="Models\EstoqueProduto.cs" />
+    <Compile Include="Models\EstoqueProdutoCubo.cs" />
+    <Compile Include="Models\EvolucaoCusto.cs" />
+    <Compile Include="Models\Fone.cs" />
+    <Compile Include="Models\FoneDialUp.cs" />
+    <Compile Include="Models\Fornecedor.cs" />
+    <Compile Include="Models\FornecedorProduto.cs" />
+    <Compile Include="Models\FotoProduto.cs" />
+    <Compile Include="Models\FuncaoOperador.cs" />
+    <Compile Include="Models\FuncaoPerfil.cs" />
+    <Compile Include="Models\FuncaoPrograma.cs" />
+    <Compile Include="Models\GrauRelacionamento.cs" />
+    <Compile Include="Models\GrupoCliente.cs" />
+    <Compile Include="Models\GrupoDespesa.cs" />
+    <Compile Include="Models\GrupoFaturamento.cs" />
+    <Compile Include="Models\GrupoMenu.cs" />
+    <Compile Include="Models\GrupoPdv.cs" />
+    <Compile Include="Models\GrupoProduto.cs" />
+    <Compile Include="Models\GrupoTributacaoProduto.cs" />
+    <Compile Include="Models\HistoricoLancamento.cs" />
+    <Compile Include="Models\HistoricoEquipamento.cs" />
+    <Compile Include="Models\ImagemItemManual.cs" />
+    <Compile Include="Models\Indicacao.cs" />
+    <Compile Include="Models\InstrucaoPdv.cs" />
+    <Compile Include="Models\InutilizacaoNfe.cs" />
+    <Compile Include="Models\Inventario.cs" />
+    <Compile Include="Models\ItemArvore.cs" />
+    <Compile Include="Models\ItemEntrada.cs" />
+    <Compile Include="Models\ItemInventario.cs" />
+    <Compile Include="Models\ItemKit.cs" />
+    <Compile Include="Models\ItemManual.cs" />
+    <Compile Include="Models\ItemMovimento.cs" />
+    <Compile Include="Models\ItemNotaFiscal.cs" />
+    <Compile Include="Models\ItemPedidoCompra.cs" />
+    <Compile Include="Models\ItemPedidoVenda.cs" />
+    <Compile Include="Models\ItemPromocao.cs" />
+    <Compile Include="Models\ItemTecladoRapido.cs" />
+    <Compile Include="Models\ItemVenda.cs" />
+    <Compile Include="Models\Kit.cs" />
+    <Compile Include="Models\Lacre.cs" />
+    <Compile Include="Models\Lancamento.cs" />
+    <Compile Include="Models\LayoutBoleto.cs" />
+    <Compile Include="Models\LayoutCnab.cs" />
+    <Compile Include="Models\Link.cs" />
+    <Compile Include="Models\Lista.cs" />
+    <Compile Include="Models\ListaLoja.cs" />
+    <Compile Include="Models\LocalEstoque.cs" />
+    <Compile Include="Models\Logradouro.cs" />
+    <Compile Include="Models\LogAcesso.cs" />
+    <Compile Include="Models\Loja.cs" />
+    <Compile Include="Models\LojaCliente.cs" />
+    <Compile Include="Models\LojaOperador.cs" />
+    <Compile Include="Models\Manual.cs" />
+    <Compile Include="Models\MapaResumo.cs" />
+    <Compile Include="Models\MarcaEcf.cs" />
+    <Compile Include="Models\MasterRetail2Context.cs" />
+    <Compile Include="Models\Mensagem.cs" />
+    <Compile Include="Models\Menu.cs" />
+    <Compile Include="Models\MicroTerminal.cs" />
+    <Compile Include="Models\ModalidadeProduto.cs" />
+    <Compile Include="Models\ModeloEcf.cs" />
+    <Compile Include="Models\MotivoDesoneracaoProduto.cs" />
+    <Compile Include="Models\MovimentacaoEquipamento.cs" />
+    <Compile Include="Models\Movimento.cs" />
+    <Compile Include="Models\MovimentoPdv.cs" />
+    <Compile Include="Models\MasterRetail2BaseContext.cs" />
+    <Compile Include="Models\NaturezaOperacao.cs" />
+    <Compile Include="Models\Ncm.cs" />
+    <Compile Include="Models\NcmCnae.cs" />
+    <Compile Include="Models\NcmUfRegimeTributario.cs" />
+    <Compile Include="Models\NotaFiscal.cs" />
+    <Compile Include="Models\Noticia.cs" />
+    <Compile Include="Models\NumeroMapaResumo.cs" />
+    <Compile Include="Models\OcorrenciaPdv.cs" />
+    <Compile Include="Models\Operador.cs" />
+    <Compile Include="Models\OperadorValorGrupo.cs" />
+    <Compile Include="Models\OrigemProduto.cs" />
+    <Compile Include="Models\Parametro.cs" />
+    <Compile Include="Models\ParametroPdv.cs" />
+    <Compile Include="Models\ParcelamentoSubtipoRecebimento.cs" />
+    <Compile Include="Models\Pdv.cs" />
+    <Compile Include="Models\PedidoCompra.cs" />
+    <Compile Include="Models\PedidoTransito.cs" />
+    <Compile Include="Models\PedidoVenda.cs" />
+    <Compile Include="Models\Perfil.cs" />
+    <Compile Include="Models\Pessoa.cs" />
+    <Compile Include="Models\PessoaRelacionamento.cs" />
+    <Compile Include="Models\Produto.cs" />
+    <Compile Include="Models\ProdutoLista.cs" />
+    <Compile Include="Models\ProdutoLoja.cs" />
+    <Compile Include="Models\Programa.cs" />
+    <Compile Include="Models\Promocao.cs" />
+    <Compile Include="Models\Propriedade.cs" />
+    <Compile Include="Models\PropriedadeProduto.cs" />
+    <Compile Include="Models\RecebimentoPdv.cs" />
+    <Compile Include="Models\RecebimentoVenda.cs" />
+    <Compile Include="Models\RedeTef.cs" />
+    <Compile Include="Models\Regiao.cs" />
+    <Compile Include="Models\RegimeTributario.cs" />
+    <Compile Include="Models\SerieNf.cs" />
+    <Compile Include="Models\Servico.cs" />
+    <Compile Include="Models\SetorBalanca.cs" />
+    <Compile Include="Models\Situacao.cs" />
+    <Compile Include="Models\SituacaoTributaria.cs" />
+    <Compile Include="Models\Submenu.cs" />
+    <Compile Include="Models\SubtipoRecebimento.cs" />
+    <Compile Include="Models\Tabela.cs" />
+    <Compile Include="Models\TecladoRapido.cs" />
+    <Compile Include="Models\TecladoRapidoPdv.cs" />
+    <Compile Include="Models\TeclaMicroTerminal.cs" />
+    <Compile Include="Models\Telefone.cs" />
+    <Compile Include="Models\TipoCobranca.cs" />
+    <Compile Include="Models\TipoDespesa.cs" />
+    <Compile Include="Models\TipoEndereco.cs" />
+    <Compile Include="Models\TipoEquipamento.cs" />
+    <Compile Include="Models\TipoGrupo.cs" />
+    <Compile Include="Models\TipoMovimento.cs" />
+    <Compile Include="Models\TipoOcorrencia.cs" />
+    <Compile Include="Models\TipoParametro.cs" />
+    <Compile Include="Models\TipoParametroPdv.cs" />
+    <Compile Include="Models\TipoRecebimento.cs" />
+    <Compile Include="Models\TipoSangria.cs" />
+    <Compile Include="Models\TransacaoEstoque.cs" />
+    <Compile Include="Models\Transportador.cs" />
+    <Compile Include="Models\Tributacao.cs" />
+    <Compile Include="Models\Uf.cs" />
+    <Compile Include="Models\UfWebservice.cs" />
+    <Compile Include="Models\Unidade.cs" />
+    <Compile Include="Models\ValorGrupo.cs" />
+    <Compile Include="Models\ValorGrupoLoja.cs" />
+    <Compile Include="Models\ValorMapaResumo.cs" />
+    <Compile Include="Models\ValorProduto.cs" />
+    <Compile Include="Models\ValorPropriedade.cs" />
+    <Compile Include="Models\Veiculo.cs" />
+    <Compile Include="Models\Venda.cs" />
+    <Compile Include="Models\VendaCubo.cs" />
+    <Compile Include="Models\VendaProdutoCubo.cs" />
+    <Compile Include="Models\Vendedor.cs" />
+    <Compile Include="Models\Video.cs" />
+    <Compile Include="Models\Volume.cs" />
+    <Compile Include="Models\VolumeEntrada.cs" />
+    <Compile Include="Models\VolumeVenda.cs" />
+    <Compile Include="Models\Webservice.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Regioes\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Regioes\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Regioes\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Regioes\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Regioes\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Regioes\_CreateOrEdit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Default\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55611</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50343/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1903</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
