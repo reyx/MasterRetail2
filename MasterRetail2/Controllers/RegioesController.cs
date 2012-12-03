@@ -5,7 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Rcky.MasterRetail2.Entities;
+using Rcky.MasterRetail2.Models;
 using MasterRetail2.Models;
 
 namespace MasterRetail2.Controllers

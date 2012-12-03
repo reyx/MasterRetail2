@@ -1,4 +1,4 @@
-using Rcky.MasterRetail2.Entities;
+using Rcky.MasterRetail2.Models;
 using System.Data.Entity.ModelConfiguration;
 
 namespace Rcky.MasterRetail2.Mapping

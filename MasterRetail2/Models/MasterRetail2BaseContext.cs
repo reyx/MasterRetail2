@@ -1,7 +1,7 @@
 using System;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
-using Rcky.MasterRetail2.Entities;
+using Rcky.MasterRetail2.Models;
 using Rcky.MasterRetail2.Mapping;
 
 namespace Rcky.MasterRetail2.Models

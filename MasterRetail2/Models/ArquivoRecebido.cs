@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Rcky.MasterRetail2.Entities
+namespace Rcky.MasterRetail2.Models
 {
     public class ArquivoRecebido
     {

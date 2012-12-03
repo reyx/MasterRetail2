@@ -4,7 +4,7 @@ using System.Data.Common;
 using System.Data.Entity;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using Rcky.MasterRetail2.Entities;
+using Rcky.MasterRetail2.Models;
 
 namespace Rcky.MasterRetail2.Mapping
 {

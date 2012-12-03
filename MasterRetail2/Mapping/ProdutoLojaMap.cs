@@ -1,4 +1,4 @@
-using Rcky.MasterRetail2.Entities;
+using Rcky.MasterRetail2.Models;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 

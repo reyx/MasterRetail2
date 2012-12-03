@@ -1,4 +1,4 @@
-using Rcky.MasterRetail2.Entities;
+using Rcky.MasterRetail2.Models;
 using Rcky.MasterRetail2.Mapping;
 //using Rcky.MasterRetail2.Mapping;
 using System;

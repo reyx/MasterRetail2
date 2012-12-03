@@ -1,0 +1,533 @@
+@model IEnumerable<Rcky.MasterRetail2.Models.Produto>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th></th>
+        <th>
+            COD_GRTP
+        </th>
+        <th>
+            Descricao
+        </th>
+        <th>
+            DescricaoReduzida
+        </th>
+        <th>
+            Custo
+        </th>
+        <th>
+            Margem
+        </th>
+        <th>
+            Preco
+        </th>
+        <th>
+            CodigoBalanca
+        </th>
+        <th>
+            TeclaBalanca
+        </th>
+        <th>
+            SetorBalandaId
+        </th>
+        <th>
+            PesoCaixa
+        </th>
+        <th>
+            Validade
+        </th>
+        <th>
+            ClasseIcms
+        </th>
+        <th>
+            Reducao
+        </th>
+        <th>
+            Cf
+        </th>
+        <th>
+            Icms
+        </th>
+        <th>
+            IcmsSt
+        </th>
+        <th>
+            Pis
+        </th>
+        <th>
+            PisSt
+        </th>
+        <th>
+            Cofins
+        </th>
+        <th>
+            CofinsSt
+        </th>
+        <th>
+            Ipi
+        </th>
+        <th>
+            IpiPeso
+        </th>
+        <th>
+            IpiSt
+        </th>
+        <th>
+            Issqn
+        </th>
+        <th>
+            IssqnSt
+        </th>
+        <th>
+            Ii
+        </th>
+        <th>
+            CoeficienteRoyalties
+        </th>
+        <th>
+            ETIQMDPR_PROD
+        </th>
+        <th>
+            ETIQENTR_PROD
+        </th>
+        <th>
+            TipoVenda
+        </th>
+        <th>
+            TipoEntrada
+        </th>
+        <th>
+            TipoBaixa
+        </th>
+        <th>
+            PesoLiquido
+        </th>
+        <th>
+            PesoBruto
+        </th>
+        <th>
+            Largura
+        </th>
+        <th>
+            Altura
+        </th>
+        <th>
+            Comprimento
+        </th>
+        <th>
+            EstoqueMinimo
+        </th>
+        <th>
+            EstoqueMaximo
+        </th>
+        <th>
+            QuantidadeEmbalagem
+        </th>
+        <th>
+            Local
+        </th>
+        <th>
+            Observacao
+        </th>
+        <th>
+            AtivoString
+        </th>
+        <th>
+            Ativo
+        </th>
+        <th>
+            ReceitaBalanca
+        </th>
+        <th>
+            UnidadeConversao
+        </th>
+        <th>
+            Comissao
+        </th>
+        <th>
+            ModalidadeProdutoStId
+        </th>
+        <th>
+            AliquotaBaseOperacaoPropria
+        </th>
+        <th>
+            AliquotaCreditoSimplesNacional
+        </th>
+        <th>
+            SituacaoTributariaIcmsId
+        </th>
+        <th>
+            SituacaoTributariaCsosnId
+        </th>
+        <th>
+            SituacaoTributariaIpiId
+        </th>
+        <th>
+            SituacaoTributariaPisId
+        </th>
+        <th>
+            SituacaoTributariaCofinsId
+        </th>
+        <th>
+            MotivoDesoneracaoId
+        </th>
+        <th>
+            Arvores
+        </th>
+        <th>
+            CodigosBarras
+        </th>
+        <th>
+            CodigoTributacao
+        </th>
+        <th>
+            Equipamentos
+        </th>
+        <th>
+            EvolucoesCusto
+        </th>
+        <th>
+            Fornecedor
+        </th>
+        <th>
+            Fornecedores
+        </th>
+        <th>
+            Fotos
+        </th>
+        <th>
+            GrupoFaturamento
+        </th>
+        <th>
+            GrupoTributacao
+        </th>
+        <th>
+            Grupo
+        </th>
+        <th>
+            ItensArvore
+        </th>
+        <th>
+            ItensKit
+        </th>
+        <th>
+            ItensPromocao
+        </th>
+        <th>
+            ItensTecladoRapido
+        </th>
+        <th>
+            Listas
+        </th>
+        <th>
+            Propriedades
+        </th>
+        <th>
+            Acessorios
+        </th>
+        <th>
+            TeclasMicroTerminal
+        </th>
+        <th>
+            Valores
+        </th>
+        <th>
+            Lojas
+        </th>
+        <th>
+            Promocao
+        </th>
+        <th>
+            Servico
+        </th>
+        <th>
+            SetorBalanca
+        </th>
+        <th>
+            TipoMovimentoBaixa
+        </th>
+        <th>
+            TipoMovimentoEntrada
+        </th>
+        <th>
+            Unidade
+        </th>
+        <th>
+            Embalagem
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ProdutoId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ProdutoId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ProdutoId })
+        </td>
+        <td>
+			@item.COD_GRTP
+        </td>
+        <td>
+			@item.Descricao
+        </td>
+        <td>
+			@item.DescricaoReduzida
+        </td>
+        <td>
+			@String.Format("{0:F}", item.Custo)
+        </td>
+        <td>
+			@String.Format("{0:F}", item.Margem)
+        </td>
+        <td>
+			@String.Format("{0:F}", item.Preco)
+        </td>
+        <td>
+			@item.CodigoBalanca
+        </td>
+        <td>
+			@item.TeclaBalanca
+        </td>
+        <td>
+			@item.SetorBalandaId
+        </td>
+        <td>
+			@item.PesoCaixa
+        </td>
+        <td>
+			@item.Validade
+        </td>
+        <td>
+			@item.ClasseIcms
+        </td>
+        <td>
+			@String.Format("{0:F}", item.Reducao)
+        </td>
+        <td>
+			@item.Cf
+        </td>
+        <td>
+			@String.Format("{0:F}", item.Icms)
+        </td>
+        <td>
+			@String.Format("{0:F}", item.IcmsSt)
+        </td>
+        <td>
+			@String.Format("{0:F}", item.Pis)
+        </td>
+        <td>
+			@String.Format("{0:F}", item.PisSt)
+        </td>
+        <td>
+			@String.Format("{0:F}", item.Cofins)
+        </td>
+        <td>
+			@String.Format("{0:F}", item.CofinsSt)
+        </td>
+        <td>
+			@String.Format("{0:F}", item.Ipi)
+        </td>
+        <td>
+			@String.Format("{0:F}", item.IpiPeso)
+        </td>
+        <td>
+			@String.Format("{0:F}", item.IpiSt)
+        </td>
+        <td>
+			@String.Format("{0:F}", item.Issqn)
+        </td>
+        <td>
+			@String.Format("{0:F}", item.IssqnSt)
+        </td>
+        <td>
+			@String.Format("{0:F}", item.Ii)
+        </td>
+        <td>
+			@String.Format("{0:F}", item.CoeficienteRoyalties)
+        </td>
+        <td>
+			@item.ETIQMDPR_PROD
+        </td>
+        <td>
+			@item.ETIQENTR_PROD
+        </td>
+        <td>
+			@item.TipoVenda
+        </td>
+        <td>
+			@item.TipoEntrada
+        </td>
+        <td>
+			@item.TipoBaixa
+        </td>
+        <td>
+			@String.Format("{0:F}", item.PesoLiquido)
+        </td>
+        <td>
+			@String.Format("{0:F}", item.PesoBruto)
+        </td>
+        <td>
+			@item.Largura
+        </td>
+        <td>
+			@item.Altura
+        </td>
+        <td>
+			@item.Comprimento
+        </td>
+        <td>
+			@String.Format("{0:F}", item.EstoqueMinimo)
+        </td>
+        <td>
+			@String.Format("{0:F}", item.EstoqueMaximo)
+        </td>
+        <td>
+			@String.Format("{0:F}", item.QuantidadeEmbalagem)
+        </td>
+        <td>
+			@item.Local
+        </td>
+        <td>
+			@item.Observacao
+        </td>
+        <td>
+			@item.AtivoString
+        </td>
+        <td>
+			@item.Ativo
+        </td>
+        <td>
+			@item.ReceitaBalanca
+        </td>
+        <td>
+			@String.Format("{0:F}", item.UnidadeConversao)
+        </td>
+        <td>
+			@String.Format("{0:F}", item.Comissao)
+        </td>
+        <td>
+			@item.ModalidadeProdutoStId
+        </td>
+        <td>
+			@String.Format("{0:F}", item.AliquotaBaseOperacaoPropria)
+        </td>
+        <td>
+			@String.Format("{0:F}", item.AliquotaCreditoSimplesNacional)
+        </td>
+        <td>
+			@item.SituacaoTributariaIcmsId
+        </td>
+        <td>
+			@item.SituacaoTributariaCsosnId
+        </td>
+        <td>
+			@item.SituacaoTributariaIpiId
+        </td>
+        <td>
+			@item.SituacaoTributariaPisId
+        </td>
+        <td>
+			@item.SituacaoTributariaCofinsId
+        </td>
+        <td>
+			@item.MotivoDesoneracaoId
+        </td>
+        <td>
+			@(item.Arvores == null ? "None" : item.Arvores.Count.ToString())
+        </td>
+        <td>
+			@(item.CodigosBarras == null ? "None" : item.CodigosBarras.Count.ToString())
+        </td>
+        <td>
+			@Html.DisplayTextFor(_ => item.CodigoTributacao).ToString()
+        </td>
+        <td>
+			@(item.Equipamentos == null ? "None" : item.Equipamentos.Count.ToString())
+        </td>
+        <td>
+			@(item.EvolucoesCusto == null ? "None" : item.EvolucoesCusto.Count.ToString())
+        </td>
+        <td>
+			@Html.DisplayTextFor(_ => item.Fornecedor).ToString()
+        </td>
+        <td>
+			@(item.Fornecedores == null ? "None" : item.Fornecedores.Count.ToString())
+        </td>
+        <td>
+			@(item.Fotos == null ? "None" : item.Fotos.Count.ToString())
+        </td>
+        <td>
+			@Html.DisplayTextFor(_ => item.GrupoFaturamento).ToString()
+        </td>
+        <td>
+			@Html.DisplayTextFor(_ => item.GrupoTributacao).ToString()
+        </td>
+        <td>
+			@Html.DisplayTextFor(_ => item.Grupo).ToString()
+        </td>
+        <td>
+			@(item.ItensArvore == null ? "None" : item.ItensArvore.Count.ToString())
+        </td>
+        <td>
+			@(item.ItensKit == null ? "None" : item.ItensKit.Count.ToString())
+        </td>
+        <td>
+			@(item.ItensPromocao == null ? "None" : item.ItensPromocao.Count.ToString())
+        </td>
+        <td>
+			@(item.ItensTecladoRapido == null ? "None" : item.ItensTecladoRapido.Count.ToString())
+        </td>
+        <td>
+			@(item.Listas == null ? "None" : item.Listas.Count.ToString())
+        </td>
+        <td>
+			@(item.Propriedades == null ? "None" : item.Propriedades.Count.ToString())
+        </td>
+        <td>
+			@(item.Acessorios == null ? "None" : item.Acessorios.Count.ToString())
+        </td>
+        <td>
+			@(item.TeclasMicroTerminal == null ? "None" : item.TeclasMicroTerminal.Count.ToString())
+        </td>
+        <td>
+			@(item.Valores == null ? "None" : item.Valores.Count.ToString())
+        </td>
+        <td>
+			@(item.Lojas == null ? "None" : item.Lojas.Count.ToString())
+        </td>
+        <td>
+			@Html.DisplayTextFor(_ => item.Promocao).ToString()
+        </td>
+        <td>
+			@Html.DisplayTextFor(_ => item.Servico).ToString()
+        </td>
+        <td>
+			@Html.DisplayTextFor(_ => item.SetorBalanca).ToString()
+        </td>
+        <td>
+			@Html.DisplayTextFor(_ => item.TipoMovimentoBaixa).ToString()
+        </td>
+        <td>
+			@Html.DisplayTextFor(_ => item.TipoMovimentoEntrada).ToString()
+        </td>
+        <td>
+			@Html.DisplayTextFor(_ => item.Unidade).ToString()
+        </td>
+        <td>
+			@Html.DisplayTextFor(_ => item.Embalagem).ToString()
+        </td>
+    </tr>
+}
+
+</table>
+
+

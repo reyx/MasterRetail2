@@ -1,0 +1,272 @@
+@model Rcky.MasterRetail2.Models.Produto
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Produto</legend>
+
+    <div class="display-label">COD_GRTP</div>
+    <div class="display-field">@Model.COD_GRTP</div>
+
+    <div class="display-label">Descricao</div>
+    <div class="display-field">@Model.Descricao</div>
+
+    <div class="display-label">DescricaoReduzida</div>
+    <div class="display-field">@Model.DescricaoReduzida</div>
+
+    <div class="display-label">Custo</div>
+    <div class="display-field">@String.Format("{0:F}", Model.Custo)</div>
+
+    <div class="display-label">Margem</div>
+    <div class="display-field">@String.Format("{0:F}", Model.Margem)</div>
+
+    <div class="display-label">Preco</div>
+    <div class="display-field">@String.Format("{0:F}", Model.Preco)</div>
+
+    <div class="display-label">CodigoBalanca</div>
+    <div class="display-field">@Model.CodigoBalanca</div>
+
+    <div class="display-label">TeclaBalanca</div>
+    <div class="display-field">@Model.TeclaBalanca</div>
+
+    <div class="display-label">SetorBalandaId</div>
+    <div class="display-field">@Model.SetorBalandaId</div>
+
+    <div class="display-label">PesoCaixa</div>
+    <div class="display-field">@Model.PesoCaixa</div>
+
+    <div class="display-label">Validade</div>
+    <div class="display-field">@Model.Validade</div>
+
+    <div class="display-label">ClasseIcms</div>
+    <div class="display-field">@Model.ClasseIcms</div>
+
+    <div class="display-label">Reducao</div>
+    <div class="display-field">@String.Format("{0:F}", Model.Reducao)</div>
+
+    <div class="display-label">Cf</div>
+    <div class="display-field">@Model.Cf</div>
+
+    <div class="display-label">Icms</div>
+    <div class="display-field">@String.Format("{0:F}", Model.Icms)</div>
+
+    <div class="display-label">IcmsSt</div>
+    <div class="display-field">@String.Format("{0:F}", Model.IcmsSt)</div>
+
+    <div class="display-label">Pis</div>
+    <div class="display-field">@String.Format("{0:F}", Model.Pis)</div>
+
+    <div class="display-label">PisSt</div>
+    <div class="display-field">@String.Format("{0:F}", Model.PisSt)</div>
+
+    <div class="display-label">Cofins</div>
+    <div class="display-field">@String.Format("{0:F}", Model.Cofins)</div>
+
+    <div class="display-label">CofinsSt</div>
+    <div class="display-field">@String.Format("{0:F}", Model.CofinsSt)</div>
+
+    <div class="display-label">Ipi</div>
+    <div class="display-field">@String.Format("{0:F}", Model.Ipi)</div>
+
+    <div class="display-label">IpiPeso</div>
+    <div class="display-field">@String.Format("{0:F}", Model.IpiPeso)</div>
+
+    <div class="display-label">IpiSt</div>
+    <div class="display-field">@String.Format("{0:F}", Model.IpiSt)</div>
+
+    <div class="display-label">Issqn</div>
+    <div class="display-field">@String.Format("{0:F}", Model.Issqn)</div>
+
+    <div class="display-label">IssqnSt</div>
+    <div class="display-field">@String.Format("{0:F}", Model.IssqnSt)</div>
+
+    <div class="display-label">Ii</div>
+    <div class="display-field">@String.Format("{0:F}", Model.Ii)</div>
+
+    <div class="display-label">CoeficienteRoyalties</div>
+    <div class="display-field">@String.Format("{0:F}", Model.CoeficienteRoyalties)</div>
+
+    <div class="display-label">ETIQMDPR_PROD</div>
+    <div class="display-field">@Model.ETIQMDPR_PROD</div>
+
+    <div class="display-label">ETIQENTR_PROD</div>
+    <div class="display-field">@Model.ETIQENTR_PROD</div>
+
+    <div class="display-label">TipoVenda</div>
+    <div class="display-field">@Model.TipoVenda</div>
+
+    <div class="display-label">TipoEntrada</div>
+    <div class="display-field">@Model.TipoEntrada</div>
+
+    <div class="display-label">TipoBaixa</div>
+    <div class="display-field">@Model.TipoBaixa</div>
+
+    <div class="display-label">PesoLiquido</div>
+    <div class="display-field">@String.Format("{0:F}", Model.PesoLiquido)</div>
+
+    <div class="display-label">PesoBruto</div>
+    <div class="display-field">@String.Format("{0:F}", Model.PesoBruto)</div>
+
+    <div class="display-label">Largura</div>
+    <div class="display-field">@Model.Largura</div>
+
+    <div class="display-label">Altura</div>
+    <div class="display-field">@Model.Altura</div>
+
+    <div class="display-label">Comprimento</div>
+    <div class="display-field">@Model.Comprimento</div>
+
+    <div class="display-label">EstoqueMinimo</div>
+    <div class="display-field">@String.Format("{0:F}", Model.EstoqueMinimo)</div>
+
+    <div class="display-label">EstoqueMaximo</div>
+    <div class="display-field">@String.Format("{0:F}", Model.EstoqueMaximo)</div>
+
+    <div class="display-label">QuantidadeEmbalagem</div>
+    <div class="display-field">@String.Format("{0:F}", Model.QuantidadeEmbalagem)</div>
+
+    <div class="display-label">Local</div>
+    <div class="display-field">@Model.Local</div>
+
+    <div class="display-label">Observacao</div>
+    <div class="display-field">@Model.Observacao</div>
+
+    <div class="display-label">AtivoString</div>
+    <div class="display-field">@Model.AtivoString</div>
+
+    <div class="display-label">Ativo</div>
+    <div class="display-field">@Model.Ativo</div>
+
+    <div class="display-label">ReceitaBalanca</div>
+    <div class="display-field">@Model.ReceitaBalanca</div>
+
+    <div class="display-label">UnidadeConversao</div>
+    <div class="display-field">@String.Format("{0:F}", Model.UnidadeConversao)</div>
+
+    <div class="display-label">Comissao</div>
+    <div class="display-field">@String.Format("{0:F}", Model.Comissao)</div>
+
+    <div class="display-label">ModalidadeProdutoStId</div>
+    <div class="display-field">@Model.ModalidadeProdutoStId</div>
+
+    <div class="display-label">AliquotaBaseOperacaoPropria</div>
+    <div class="display-field">@String.Format("{0:F}", Model.AliquotaBaseOperacaoPropria)</div>
+
+    <div class="display-label">AliquotaCreditoSimplesNacional</div>
+    <div class="display-field">@String.Format("{0:F}", Model.AliquotaCreditoSimplesNacional)</div>
+
+    <div class="display-label">SituacaoTributariaIcmsId</div>
+    <div class="display-field">@Model.SituacaoTributariaIcmsId</div>
+
+    <div class="display-label">SituacaoTributariaCsosnId</div>
+    <div class="display-field">@Model.SituacaoTributariaCsosnId</div>
+
+    <div class="display-label">SituacaoTributariaIpiId</div>
+    <div class="display-field">@Model.SituacaoTributariaIpiId</div>
+
+    <div class="display-label">SituacaoTributariaPisId</div>
+    <div class="display-field">@Model.SituacaoTributariaPisId</div>
+
+    <div class="display-label">SituacaoTributariaCofinsId</div>
+    <div class="display-field">@Model.SituacaoTributariaCofinsId</div>
+
+    <div class="display-label">MotivoDesoneracaoId</div>
+    <div class="display-field">@Model.MotivoDesoneracaoId</div>
+
+    <div class="display-label">Arvores</div>
+    <div class="display-field">@(Model.Arvores == null ? "None" : Model.Arvores.Count.ToString())</div>
+
+    <div class="display-label">CodigosBarras</div>
+    <div class="display-field">@(Model.CodigosBarras == null ? "None" : Model.CodigosBarras.Count.ToString())</div>
+
+    <div class="display-label">CodigoTributacao</div>
+    <div class="display-field">@Html.DisplayTextFor(_ => Model.CodigoTributacao).ToString()</div>
+
+    <div class="display-label">Equipamentos</div>
+    <div class="display-field">@(Model.Equipamentos == null ? "None" : Model.Equipamentos.Count.ToString())</div>
+
+    <div class="display-label">EvolucoesCusto</div>
+    <div class="display-field">@(Model.EvolucoesCusto == null ? "None" : Model.EvolucoesCusto.Count.ToString())</div>
+
+    <div class="display-label">Fornecedor</div>
+    <div class="display-field">@Html.DisplayTextFor(_ => Model.Fornecedor).ToString()</div>
+
+    <div class="display-label">Fornecedores</div>
+    <div class="display-field">@(Model.Fornecedores == null ? "None" : Model.Fornecedores.Count.ToString())</div>
+
+    <div class="display-label">Fotos</div>
+    <div class="display-field">@(Model.Fotos == null ? "None" : Model.Fotos.Count.ToString())</div>
+
+    <div class="display-label">GrupoFaturamento</div>
+    <div class="display-field">@Html.DisplayTextFor(_ => Model.GrupoFaturamento).ToString()</div>
+
+    <div class="display-label">GrupoTributacao</div>
+    <div class="display-field">@Html.DisplayTextFor(_ => Model.GrupoTributacao).ToString()</div>
+
+    <div class="display-label">Grupo</div>
+    <div class="display-field">@Html.DisplayTextFor(_ => Model.Grupo).ToString()</div>
+
+    <div class="display-label">ItensArvore</div>
+    <div class="display-field">@(Model.ItensArvore == null ? "None" : Model.ItensArvore.Count.ToString())</div>
+
+    <div class="display-label">ItensKit</div>
+    <div class="display-field">@(Model.ItensKit == null ? "None" : Model.ItensKit.Count.ToString())</div>
+
+    <div class="display-label">ItensPromocao</div>
+    <div class="display-field">@(Model.ItensPromocao == null ? "None" : Model.ItensPromocao.Count.ToString())</div>
+
+    <div class="display-label">ItensTecladoRapido</div>
+    <div class="display-field">@(Model.ItensTecladoRapido == null ? "None" : Model.ItensTecladoRapido.Count.ToString())</div>
+
+    <div class="display-label">Listas</div>
+    <div class="display-field">@(Model.Listas == null ? "None" : Model.Listas.Count.ToString())</div>
+
+    <div class="display-label">Propriedades</div>
+    <div class="display-field">@(Model.Propriedades == null ? "None" : Model.Propriedades.Count.ToString())</div>
+
+    <div class="display-label">Acessorios</div>
+    <div class="display-field">@(Model.Acessorios == null ? "None" : Model.Acessorios.Count.ToString())</div>
+
+    <div class="display-label">TeclasMicroTerminal</div>
+    <div class="display-field">@(Model.TeclasMicroTerminal == null ? "None" : Model.TeclasMicroTerminal.Count.ToString())</div>
+
+    <div class="display-label">Valores</div>
+    <div class="display-field">@(Model.Valores == null ? "None" : Model.Valores.Count.ToString())</div>
+
+    <div class="display-label">Lojas</div>
+    <div class="display-field">@(Model.Lojas == null ? "None" : Model.Lojas.Count.ToString())</div>
+
+    <div class="display-label">Promocao</div>
+    <div class="display-field">@Html.DisplayTextFor(_ => Model.Promocao).ToString()</div>
+
+    <div class="display-label">Servico</div>
+    <div class="display-field">@Html.DisplayTextFor(_ => Model.Servico).ToString()</div>
+
+    <div class="display-label">SetorBalanca</div>
+    <div class="display-field">@Html.DisplayTextFor(_ => Model.SetorBalanca).ToString()</div>
+
+    <div class="display-label">TipoMovimentoBaixa</div>
+    <div class="display-field">@Html.DisplayTextFor(_ => Model.TipoMovimentoBaixa).ToString()</div>
+
+    <div class="display-label">TipoMovimentoEntrada</div>
+    <div class="display-field">@Html.DisplayTextFor(_ => Model.TipoMovimentoEntrada).ToString()</div>
+
+    <div class="display-label">Unidade</div>
+    <div class="display-field">@Html.DisplayTextFor(_ => Model.Unidade).ToString()</div>
+
+    <div class="display-label">Embalagem</div>
+    <div class="display-field">@Html.DisplayTextFor(_ => Model.Embalagem).ToString()</div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
+
+

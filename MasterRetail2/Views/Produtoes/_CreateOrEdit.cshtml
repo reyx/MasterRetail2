@@ -1,0 +1,573 @@
+@model Rcky.MasterRetail2.Models.Produto
+
+@* This partial view defines form fields that will appear when creating and editing entities *@
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.COD_GRTP)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.COD_GRTP)
+    @Html.ValidationMessageFor(model => model.COD_GRTP)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Descricao)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Descricao)
+    @Html.ValidationMessageFor(model => model.Descricao)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.DescricaoReduzida)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.DescricaoReduzida)
+    @Html.ValidationMessageFor(model => model.DescricaoReduzida)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Custo)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Custo)
+    @Html.ValidationMessageFor(model => model.Custo)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Margem)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Margem)
+    @Html.ValidationMessageFor(model => model.Margem)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Preco)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Preco)
+    @Html.ValidationMessageFor(model => model.Preco)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.CodigoBalanca)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.CodigoBalanca)
+    @Html.ValidationMessageFor(model => model.CodigoBalanca)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.TeclaBalanca)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.TeclaBalanca)
+    @Html.ValidationMessageFor(model => model.TeclaBalanca)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.SetorBalandaId)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.SetorBalandaId)
+    @Html.ValidationMessageFor(model => model.SetorBalandaId)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.PesoCaixa)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.PesoCaixa)
+    @Html.ValidationMessageFor(model => model.PesoCaixa)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Validade)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Validade)
+    @Html.ValidationMessageFor(model => model.Validade)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.ClasseIcms)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.ClasseIcms)
+    @Html.ValidationMessageFor(model => model.ClasseIcms)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Reducao)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Reducao)
+    @Html.ValidationMessageFor(model => model.Reducao)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Cf)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Cf)
+    @Html.ValidationMessageFor(model => model.Cf)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Icms)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Icms)
+    @Html.ValidationMessageFor(model => model.Icms)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.IcmsSt)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.IcmsSt)
+    @Html.ValidationMessageFor(model => model.IcmsSt)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Pis)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Pis)
+    @Html.ValidationMessageFor(model => model.Pis)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.PisSt)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.PisSt)
+    @Html.ValidationMessageFor(model => model.PisSt)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Cofins)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Cofins)
+    @Html.ValidationMessageFor(model => model.Cofins)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.CofinsSt)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.CofinsSt)
+    @Html.ValidationMessageFor(model => model.CofinsSt)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Ipi)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Ipi)
+    @Html.ValidationMessageFor(model => model.Ipi)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.IpiPeso)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.IpiPeso)
+    @Html.ValidationMessageFor(model => model.IpiPeso)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.IpiSt)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.IpiSt)
+    @Html.ValidationMessageFor(model => model.IpiSt)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Issqn)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Issqn)
+    @Html.ValidationMessageFor(model => model.Issqn)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.IssqnSt)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.IssqnSt)
+    @Html.ValidationMessageFor(model => model.IssqnSt)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Ii)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Ii)
+    @Html.ValidationMessageFor(model => model.Ii)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.CoeficienteRoyalties)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.CoeficienteRoyalties)
+    @Html.ValidationMessageFor(model => model.CoeficienteRoyalties)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.ETIQMDPR_PROD)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.ETIQMDPR_PROD)
+    @Html.ValidationMessageFor(model => model.ETIQMDPR_PROD)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.ETIQENTR_PROD)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.ETIQENTR_PROD)
+    @Html.ValidationMessageFor(model => model.ETIQENTR_PROD)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.TipoVenda)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.TipoVenda)
+    @Html.ValidationMessageFor(model => model.TipoVenda)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.TipoEntrada)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.TipoEntrada)
+    @Html.ValidationMessageFor(model => model.TipoEntrada)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.TipoBaixa)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.TipoBaixa)
+    @Html.ValidationMessageFor(model => model.TipoBaixa)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.PesoLiquido)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.PesoLiquido)
+    @Html.ValidationMessageFor(model => model.PesoLiquido)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.PesoBruto)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.PesoBruto)
+    @Html.ValidationMessageFor(model => model.PesoBruto)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Largura)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Largura)
+    @Html.ValidationMessageFor(model => model.Largura)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Altura)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Altura)
+    @Html.ValidationMessageFor(model => model.Altura)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Comprimento)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Comprimento)
+    @Html.ValidationMessageFor(model => model.Comprimento)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.EstoqueMinimo)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.EstoqueMinimo)
+    @Html.ValidationMessageFor(model => model.EstoqueMinimo)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.EstoqueMaximo)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.EstoqueMaximo)
+    @Html.ValidationMessageFor(model => model.EstoqueMaximo)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.QuantidadeEmbalagem)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.QuantidadeEmbalagem)
+    @Html.ValidationMessageFor(model => model.QuantidadeEmbalagem)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Local)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Local)
+    @Html.ValidationMessageFor(model => model.Local)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Observacao)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Observacao)
+    @Html.ValidationMessageFor(model => model.Observacao)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.AtivoString)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.AtivoString)
+    @Html.ValidationMessageFor(model => model.AtivoString)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Ativo)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Ativo)
+    @Html.ValidationMessageFor(model => model.Ativo)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.ReceitaBalanca)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.ReceitaBalanca)
+    @Html.ValidationMessageFor(model => model.ReceitaBalanca)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.UnidadeConversao)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.UnidadeConversao)
+    @Html.ValidationMessageFor(model => model.UnidadeConversao)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Comissao)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Comissao)
+    @Html.ValidationMessageFor(model => model.Comissao)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.ModalidadeProdutoStId)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.ModalidadeProdutoStId)
+    @Html.ValidationMessageFor(model => model.ModalidadeProdutoStId)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.AliquotaBaseOperacaoPropria)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.AliquotaBaseOperacaoPropria)
+    @Html.ValidationMessageFor(model => model.AliquotaBaseOperacaoPropria)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.AliquotaCreditoSimplesNacional)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.AliquotaCreditoSimplesNacional)
+    @Html.ValidationMessageFor(model => model.AliquotaCreditoSimplesNacional)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.SituacaoTributariaIcmsId)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.SituacaoTributariaIcmsId)
+    @Html.ValidationMessageFor(model => model.SituacaoTributariaIcmsId)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.SituacaoTributariaCsosnId)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.SituacaoTributariaCsosnId)
+    @Html.ValidationMessageFor(model => model.SituacaoTributariaCsosnId)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.SituacaoTributariaIpiId)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.SituacaoTributariaIpiId)
+    @Html.ValidationMessageFor(model => model.SituacaoTributariaIpiId)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.SituacaoTributariaPisId)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.SituacaoTributariaPisId)
+    @Html.ValidationMessageFor(model => model.SituacaoTributariaPisId)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.SituacaoTributariaCofinsId)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.SituacaoTributariaCofinsId)
+    @Html.ValidationMessageFor(model => model.SituacaoTributariaCofinsId)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.MotivoDesoneracaoId)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.MotivoDesoneracaoId)
+    @Html.ValidationMessageFor(model => model.MotivoDesoneracaoId)
+</div>
+
+<div class="editor-label">
+    GrupoProduto
+</div>
+<div class="editor-field">
+    @Html.DropDownListFor(model => model.GrupoProdutoId, ((IEnumerable<Rcky.MasterRetail2.Models.GrupoProduto>)ViewBag.PossibleGrupoProdutos).Select(option => new SelectListItem {
+        Text = Html.DisplayTextFor(_ => option).ToString(), 
+        Value = option.GrupoProdutoId.ToString(),
+        Selected = (Model != null) && (option.GrupoProdutoId == Model.GrupoProdutoId)
+    }), "Choose...")
+    @Html.ValidationMessageFor(model => model.GrupoProdutoId)
+</div>
+<div class="editor-label">
+    GrupoFaturamento
+</div>
+<div class="editor-field">
+    @Html.DropDownListFor(model => model.GrupoFaturamentoId, ((IEnumerable<Rcky.MasterRetail2.Models.GrupoFaturamento>)ViewBag.PossibleGrupoFaturamentoes).Select(option => new SelectListItem {
+        Text = Html.DisplayTextFor(_ => option).ToString(), 
+        Value = option.GrupoFaturamentoId.ToString(),
+        Selected = (Model != null) && (option.GrupoFaturamentoId == Model.GrupoFaturamentoId)
+    }), "Choose...")
+    @Html.ValidationMessageFor(model => model.GrupoFaturamentoId)
+</div>
+<div class="editor-label">
+    Unidade
+</div>
+<div class="editor-field">
+    @Html.DropDownListFor(model => model.UnidadeId, ((IEnumerable<Rcky.MasterRetail2.Models.Unidade>)ViewBag.PossibleUnidades).Select(option => new SelectListItem {
+        Text = Html.DisplayTextFor(_ => option).ToString(), 
+        Value = option.UnidadeId.ToString(),
+        Selected = (Model != null) && (option.UnidadeId == Model.UnidadeId)
+    }), "Choose...")
+    @Html.ValidationMessageFor(model => model.UnidadeId)
+</div>
+<div class="editor-label">
+    Embalagem
+</div>
+<div class="editor-field">
+    @Html.DropDownListFor(model => model.EmbalagemId, ((IEnumerable<Rcky.MasterRetail2.Models.Unidade>)ViewBag.PossibleEmbalagems).Select(option => new SelectListItem {
+        Text = Html.DisplayTextFor(_ => option).ToString(), 
+        Value = option.UnidadeId.ToString(),
+        Selected = (Model != null) && (option.UnidadeId == Model.EmbalagemId)
+    }), "Choose...")
+    @Html.ValidationMessageFor(model => model.EmbalagemId)
+</div>
+<div class="editor-label">
+    Fornecedor
+</div>
+<div class="editor-field">
+    @Html.DropDownListFor(model => model.FornecedorId, ((IEnumerable<Rcky.MasterRetail2.Models.Fornecedor>)ViewBag.PossibleFornecedores).Select(option => new SelectListItem {
+        Text = Html.DisplayTextFor(_ => option).ToString(), 
+        Value = option.FornecedorId.ToString(),
+        Selected = (Model != null) && (option.FornecedorId == Model.FornecedorId)
+    }), "Choose...")
+    @Html.ValidationMessageFor(model => model.FornecedorId)
+</div>
+<div class="editor-label">
+    CodigoTributacao
+</div>
+<div class="editor-field">
+    @Html.DropDownListFor(model => model.CodigoTributacaoId, ((IEnumerable<Rcky.MasterRetail2.Models.CodigoTributacao>)ViewBag.PossibleCodigoTributacaos).Select(option => new SelectListItem {
+        Text = Html.DisplayTextFor(_ => option).ToString(), 
+        Value = option.CodigoTributacaoId.ToString(),
+        Selected = (Model != null) && (option.CodigoTributacaoId == Model.CodigoTributacaoId)
+    }), "Choose...")
+    @Html.ValidationMessageFor(model => model.CodigoTributacaoId)
+</div>
+<div class="editor-label">
+    Promocao
+</div>
+<div class="editor-field">
+    @Html.DropDownListFor(model => model.PromocaoId, ((IEnumerable<Rcky.MasterRetail2.Models.Promocao>)ViewBag.PossiblePromocaos).Select(option => new SelectListItem {
+        Text = Html.DisplayTextFor(_ => option).ToString(), 
+        Value = option.PromocaoId.ToString(),
+        Selected = (Model != null) && (option.PromocaoId == Model.PromocaoId)
+    }), "Choose...")
+    @Html.ValidationMessageFor(model => model.PromocaoId)
+</div>
+<div class="editor-label">
+    Servico
+</div>
+<div class="editor-field">
+    @Html.DropDownListFor(model => model.ServicoId, ((IEnumerable<Rcky.MasterRetail2.Models.Servico>)ViewBag.PossibleServicoes).Select(option => new SelectListItem {
+        Text = Html.DisplayTextFor(_ => option).ToString(), 
+        Value = option.ServicoId.ToString(),
+        Selected = (Model != null) && (option.ServicoId == Model.ServicoId)
+    }), "Choose...")
+    @Html.ValidationMessageFor(model => model.ServicoId)
+</div>
+<div class="editor-label">
+    Ncm
+</div>
+<div class="editor-field">
+    @Html.DropDownListFor(model => model.NcmId, ((IEnumerable<Rcky.MasterRetail2.Models.Ncm>)ViewBag.PossibleNcms).Select(option => new SelectListItem {
+        Text = Html.DisplayTextFor(_ => option).ToString(), 
+        Value = option.NcmId.ToString(),
+        Selected = (Model != null) && (option.NcmId == Model.NcmId)
+    }), "Choose...")
+    @Html.ValidationMessageFor(model => model.NcmId)
+</div>
+<div class="editor-label">
+    OrigemProduto
+</div>
+<div class="editor-field">
+    @Html.DropDownListFor(model => model.OrigemProdutoId, ((IEnumerable<Rcky.MasterRetail2.Models.OrigemProduto>)ViewBag.PossibleOrigemProdutos).Select(option => new SelectListItem {
+        Text = Html.DisplayTextFor(_ => option).ToString(), 
+        Value = option.OrigemProdutoId.ToString(),
+        Selected = (Model != null) && (option.OrigemProdutoId == Model.OrigemProdutoId)
+    }), "Choose...")
+    @Html.ValidationMessageFor(model => model.OrigemProdutoId)
+</div>
+<div class="editor-label">
+    ModalidadeProduto
+</div>
+<div class="editor-field">
+    @Html.DropDownListFor(model => model.ModalidadeProdutoId, ((IEnumerable<Rcky.MasterRetail2.Models.ModalidadeProduto>)ViewBag.PossibleModalidadeProdutos).Select(option => new SelectListItem {
+        Text = Html.DisplayTextFor(_ => option).ToString(), 
+        Value = option.ModalidadeProdutoId.ToString(),
+        Selected = (Model != null) && (option.ModalidadeProdutoId == Model.ModalidadeProdutoId)
+    }), "Choose...")
+    @Html.ValidationMessageFor(model => model.ModalidadeProdutoId)
+</div>
